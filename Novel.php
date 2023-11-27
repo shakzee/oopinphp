@@ -1,15 +1,21 @@
 <?php
-include 'Book.php';
-class Novel extends Book
+require_once 'Literature.php';
+class Novel extends Literature
 {
-    public $genre;
-    public function __construct($title, $author, $pages,$genre)
+    private  $content;
+    public function __construct($title,$content)
     {
-        parent::__construct($title, $author, $pages);
-        $this->genre = $genre;
+        parent::__construct($title);
+        $this->content = $content;
     }
-
+    public function getContent()
+    {
+        return $this->content;
+    }
 }
 
-$novel1 = new Novel('Third Book','Alex',500,'Science fiction');
-var_dump($novel1);
+$mynovel = new Novel('Here is my Title','Hee is my Contetn');
+echo $mynovel->getTitle();
+echo '<br>';
+echo '<br>';
+    echo $mynovel->getContent();
