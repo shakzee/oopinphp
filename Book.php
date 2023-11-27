@@ -24,10 +24,10 @@ class Book
 $firstBook = new Book('First Book','John Wick',20);
 $secondBook = new Book('Second Book','Bob',80);
 
-var_dump($firstBook);
-echo '<br><br>';
-var_dump($secondBook);
-echo '<br><br>';
-echo '<br><br>';
+// var_dump($firstBook);
+// echo '<br><br>';
+// var_dump($secondBook);
+// echo '<br><br>';
+// echo '<br><br>';
 
-var_dump(Book::getBookCount());
+// var_dump(Book::getBookCount());
