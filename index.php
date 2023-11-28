@@ -1,16 +1,28 @@
 <?php
-require_once 'database.php';
-require_once 'BookDB.php';
 
-$bookDb = new BookDB($pdo);
+// A simple PHP script with some math operations
+// Start timing
+$startTime = microtime(true);
 
-$currId = $bookDb->addBook('My New Book','John Wick',1985);
-$updateRecord = $bookDb->updateBook('Update My New Book','Update John Wick',2018,$currId);
-$deletedRecord = $bookDb->deleteBook(1);
-echo "Deleted $deletedRecord book(s)<br>";
-var_dump($currId);
-//$books = $bookDb->getAllBooks();
+// Your code block
+for ($i = 0; $i < 50000000; $i++) {
+    $result = cos($i) * sin($i);
+}
+
+// End timing
+$endTime = microtime(true);
+
+// Calculate total time
+$executionTime = $endTime - $startTime;
+
+// Output the result
+echo "Execution time: " . $executionTime . " seconds";
+
+
+
+//require_once __DIR__ . '/vendor/autoload.php';
+//use MyApp\Person;
 //
-//foreach ($books as $mybook) {
-//    var_dump($mybook['title']);
-//}
+//$person =  new Person('Joh Wick',20);
+//echo $person;
+////$person->log('This is a custom log message.');
